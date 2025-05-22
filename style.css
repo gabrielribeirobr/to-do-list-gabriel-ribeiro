@@ -4,6 +4,8 @@ body{
     align-items: center;
     flex-direction: column;
     height: 50vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
 }
 
 .btnRemove{
@@ -16,6 +18,3 @@ body{
     cursor: pointer;
 }
 
-#itemWapper{
-    display: flex;
-}
