@@ -6,9 +6,9 @@ btnAdd.addEventListener("click", () => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('itemWrapper');
 
-    
+
     const inputValue = document.getElementById('txt').value.trim(); // verificando se o campo está vazio
-    if(inputValue === "") return; 
+    if (inputValue === "") return;
 
 
     /*  criando a li da ul */
@@ -22,8 +22,13 @@ btnAdd.addEventListener("click", () => {
     /* criando o botão de remover a li */
 
     const btnRemove = document.createElement('button');
-    
+    li.appendChild(btnRemove);
+    btnRemove.addEventListener("click", () => {
+        ul.remove(wrapper);
+    });
 
 
     document.getElementById('txt').value = "";
+    wrapper.appendChild(li);
+    ul.appendChild(wrapper);
 });
