@@ -23,12 +23,17 @@ btnAdd.addEventListener("click", () => {
 
     const btnRemove = document.createElement('button');
     li.appendChild(btnRemove);
+    btnRemove.setAttribute('aria-label', 'Remover tarefa');
+    btnRemove.classList.add('btnRemove');
     btnRemove.addEventListener("click", () => {
-        ul.remove(wrapper);
+        ul.removeChild(wrapper);
     });
 
 
-    document.getElementById('txt').value = "";
+    
     wrapper.appendChild(li);
+    wrapper.appendChild(btnRemove)
     ul.appendChild(wrapper);
+    
+    document.getElementById('txt').value = "";
 });
