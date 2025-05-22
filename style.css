@@ -5,3 +5,17 @@ body{
     flex-direction: column;
     height: 50vh;
 }
+
+.btnRemove{
+    width: 52px;
+    height: 52px;
+    background-image: url('imgs/trash-alt-svgrepo-com.svg');
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+#itemWapper{
+    display: flex;
+}
