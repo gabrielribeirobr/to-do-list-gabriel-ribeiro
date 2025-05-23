@@ -113,3 +113,14 @@ ul {
     border: none;
     cursor: pointer;
 }
+
+.btnDone{
+    width: 52px;
+    height: 52px;
+    color: green;
+    background-image: url('imgs/done-1478-svgrepo-com.svg');
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
