@@ -1,7 +1,8 @@
 :root{
-    --color-primary: #87CEEB;
-    --color-secundary: #20B2AA;
+    --color-primary: #36544f;
+    --color-secundary: #1f5f61;
     --color-focus: #e7e7e7;
+    --color-verde-claro: #0b8185;
 }
 
 html, body{
@@ -9,6 +10,7 @@ html, body{
 }
 
 body{
+
     min-height: 100%;
     display: flex;
     justify-content: center;
@@ -20,12 +22,13 @@ body{
 }
 
 .hero{
-    
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
+    background-color: var(--color-bege);
 }
+
 #txt{
+
     font-size: 18px;
 	padding: 5px 10px;
 	outline: none;
