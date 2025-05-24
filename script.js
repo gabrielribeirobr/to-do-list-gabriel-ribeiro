@@ -43,9 +43,6 @@ btnAdd.addEventListener("click", () => {
         ul.removeChild(wrapper);
     });
 
-    
-
-
 
     wrapper.appendChild(li);
     wrapper.appendChild(buttonsLi);
