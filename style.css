@@ -72,6 +72,10 @@ ul {
     color: #b1b1b1;
 }
 
+span {
+    font-size: 18px;
+}
+
 #btnAdd {
     background-color: var(--color-white);
     border-radius: 5px;
@@ -93,17 +97,18 @@ ul {
 
     display: flex;
     width: 100%;
-
+    align-items: center;
     flex-direction: row;
     background-color: var(--color-white);
     justify-content: space-between;
+    padding-left: 4px;
 }
 
 .itemLi {
     font-size: 16px;
 }
 
-.buttonsLi{
+.buttonsLi {
     display: flex;
     gap: 4px;
     padding: 4px;
@@ -127,6 +132,10 @@ ul {
     background-position: center center;
 }
 
+.btnRemove:hover {
+    background-color: #8a3030;
+}
+
 .btnDone {
     background-color: #06b100;
     border-radius: 5px;
@@ -144,3 +153,14 @@ ul {
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.btnDone:hover {
+    background-color: #068d01;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media (max-wi) {}
