@@ -18,14 +18,15 @@ btnAdd.addEventListener("click", () => {
     ul.appendChild(li);
 
     const buttonsLi = document.createElement('div');
-    buttonsLi   // criando a div dos botoes 
+    buttonsLi.classList.add('buttonsLi');
+    li.appendChild(buttonsLi);
 
     li.textContent = document.getElementById('txt').value;
 
     /* criando o botão de remover a li */
 
     const btnRemove = document.createElement('button');
-    li.appendChild(btnRemove);
+    buttonsLi.appendChild(btnRemove);
     btnRemove.setAttribute('aria-label', 'Remover tarefa');
     btnRemove.classList.add('btnRemove');
     btnRemove.addEventListener("click", () => {
@@ -33,7 +34,7 @@ btnAdd.addEventListener("click", () => {
     });
 
     const btnDone = document.createElement('button');
-    li.appendChild(btnDone);
+    buttonsLi.appendChild(btnDone);
     btnDone.setAttribute('arial-label', 'Marcar como feito');
     btnDone.classList.add('btnDone');
     btnDone.addEventListener("click", () =>{
@@ -43,8 +44,7 @@ btnAdd.addEventListener("click", () => {
 
     
     wrapper.appendChild(li);
-    wrapper.appendChild(btnRemove);
-    wrapper.appendChild(btnDone);
+    wrapper.appendChild(buttonsLi);
     ul.appendChild(wrapper);
     
     document.getElementById('txt').value = "";
