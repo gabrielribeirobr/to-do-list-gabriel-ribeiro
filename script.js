@@ -23,6 +23,16 @@ btnAdd.addEventListener("click", () => {
 
     li.textContent = document.getElementById('txt').value;
 
+    /* criando o botão de 'feito' na tarefa */
+
+    const btnDone = document.createElement('button');
+    buttonsLi.appendChild(btnDone);
+    btnDone.setAttribute('arial-label', 'Marcar como feito');
+    btnDone.classList.add('btnDone');
+    btnDone.addEventListener("click", () => {
+
+    });
+
     /* criando o botão de remover a li */
 
     const btnRemove = document.createElement('button');
@@ -33,19 +43,13 @@ btnAdd.addEventListener("click", () => {
         ul.removeChild(wrapper);
     });
 
-    const btnDone = document.createElement('button');
-    buttonsLi.appendChild(btnDone);
-    btnDone.setAttribute('arial-label', 'Marcar como feito');
-    btnDone.classList.add('btnDone');
-    btnDone.addEventListener("click", () =>{
-        
-    })
-
-
     
+
+
+
     wrapper.appendChild(li);
     wrapper.appendChild(buttonsLi);
     ul.appendChild(wrapper);
-    
+
     document.getElementById('txt').value = "";
 });
