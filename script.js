@@ -1,52 +1,48 @@
-/* criando o botão para adicionar tarefas */
 const btnAdd = document.getElementById('btnAdd');
 
 btnAdd.addEventListener("click", () => {
+    const inputValue = document.getElementById('txt').value.trim(); // Verifica se o campo está vazio
+    if (inputValue === "") return;
+
+    const ul = document.getElementById('ul');
 
     const wrapper = document.createElement('div');
     wrapper.classList.add('itemWrapper');
 
-
-    const inputValue = document.getElementById('txt').value.trim(); // verificando se o campo está vazio
-    if (inputValue === "") return;
-
-
-    /*  criando a li da ul */
     const li = document.createElement('li');
     li.classList.add('itemLi');
-    const ul = document.getElementById('ul');
-    ul.appendChild(li);
+
+    // Cria o span para conter o texto da tarefa
+    const span = document.createElement('span');
+    span.textContent = inputValue;
+    li.appendChild(span);
 
     const buttonsLi = document.createElement('div');
     buttonsLi.classList.add('buttonsLi');
-    li.appendChild(buttonsLi);
 
-    li.textContent = document.getElementById('txt').value;
-
-    /* criando o botão de 'feito' na tarefa */
-
+    // Botão "feito"
     const btnDone = document.createElement('button');
-    buttonsLi.appendChild(btnDone);
-    btnDone.setAttribute('arial-label', 'Marcar como feito');
+    btnDone.setAttribute('aria-label', 'Marcar como feito');
     btnDone.classList.add('btnDone');
     btnDone.addEventListener("click", () => {
-
+        span.classList.toggle('done'); // Alterna riscado
     });
 
-    /* criando o botão de remover a li */
-
+    // Botão "remover"
     const btnRemove = document.createElement('button');
-    buttonsLi.appendChild(btnRemove);
     btnRemove.setAttribute('aria-label', 'Remover tarefa');
     btnRemove.classList.add('btnRemove');
     btnRemove.addEventListener("click", () => {
         ul.removeChild(wrapper);
     });
 
-
+    // Montando tudo
+    buttonsLi.appendChild(btnDone);
+    buttonsLi.appendChild(btnRemove);
     wrapper.appendChild(li);
     wrapper.appendChild(buttonsLi);
     ul.appendChild(wrapper);
 
+    // Limpa o campo
     document.getElementById('txt').value = "";
 });
