@@ -5,6 +5,11 @@
     --color-light-green: #0b8185;
     --color-white: #ffffff;
     --color-orange: #d4ac28;
+    --color-dark-orange:#a88820;
+    --color-red: #c74545;
+    --color-dark-red: #973333;
+    --color-green: #06b100;
+    --color-dark-green: #068d01;
 }
 
 html,
@@ -107,18 +112,6 @@ span {
     transition: all 0.3s ease;
 }
 
-.itemWrapper.expanded{
-    height: 200px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    transition: all 0.3s ease;
-}
-
-.intemWrapper.contracted{
-    height: 60px;
-    transition: all 0.3s ease;
-}
 .itemLi input{
     display: none;
 }
@@ -128,16 +121,39 @@ span {
     font-size: 16px;
     align-items: baseline;
 }
+
+.buttonsLi {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+}
+
 .btnSave{
     display: none;
+    background-color: var(--color-green);
+    border-radius: 5px;
+    border: 1px solid #068d01;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 16px 16px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+    background-image: url('imgs/saveIcon.png');
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btnSave:hover{
+    background-color: var(--color-dark-green);
 }
 .btnEdit{
-    background-color: #c74545;
+    background-color: var(--color-orange);
     border-radius: 5px;
-    border: 1px solid #f50a0a;
+    border: 1px solid var(--color-dark-orange);
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     font-family: Arial;
     font-size: 16px;
     padding: 16px 16px;
@@ -149,19 +165,18 @@ span {
     background-position: center center;
 }
 
-.buttonsLi {
-    display: flex;
-    gap: 4px;
-    padding: 4px;
+.btnEdit:hover{
+    background-color: var(--color-dark-orange);
 }
 
+
+
 .btnRemove {
-    background-color: #c74545;
+    background-color: var(--color-red);
     border-radius: 5px;
     border: 1px solid #f50a0a;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     font-family: Arial;
     font-size: 16px;
     padding: 16px 16px;
@@ -174,7 +189,7 @@ span {
 }
 
 .btnRemove:hover {
-    background-color: #8a3030;
+    background-color: var(--color-dark-red);
 }
 
 .btnDone {
@@ -183,7 +198,6 @@ span {
     border: 1px solid #068d01;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
     font-family: Arial;
     font-size: 16px;
     padding: 16px 16px;
