@@ -17,6 +17,15 @@ btnAdd.addEventListener("click", () => {
     span.textContent = inputValue;
     li.appendChild(span);
 
+    const btnEdit = document.createElement('button');
+    span.appendChild(btnEdit);
+    btnEdit.textContent = 'TESTE'
+    btnEdit.classList.toggle('open');
+    btnEdit.addEventListener("click", () => {
+        wrapper.classList.toggle('expanded');
+    })
+
+
     const buttonsLi = document.createElement('div');
     buttonsLi.classList.add('buttonsLi');
 
