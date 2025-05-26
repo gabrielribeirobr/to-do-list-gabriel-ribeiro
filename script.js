@@ -22,13 +22,16 @@ btnAdd.addEventListener("click", () => {
     input.value = inputValue;
     li.appendChild(input);
 
+    // botão "editar"
 
     const btnEdit = document.createElement('button');
-    span.appendChild(btnEdit);
-    btnEdit.textContent = 'TESTE'
-    btnEdit.classList.toggle('open');
+    btnEdit.textContent = 'editar'
     btnEdit.addEventListener("click", () => {
-        wrapper.classList.toggle('expanded');
+        btnEdit.style.display = 'none';
+        li.querySelector('input').style.display = "inline-block";
+        btnRemove.style.display = "none";
+        btnDone.style.display = "none";
+        btnSave.style.display = 'inline-block';
     })
 
 
@@ -44,9 +47,17 @@ btnAdd.addEventListener("click", () => {
         const button = e.target;
         const li = button.closest('li');
         const span = li.querySelector('span');
-        console.log(span);
+        span.textContent = li.querySelector('input').value;
+        li.querySelector('input').style.display = 'none';
+        btnSave.style.display = 'none';
+        btnEdit.style.display = 'inline-block';
+        btnRemove.style.display = "inline-block";
+        btnDone.style.display = "inline-block";
         
-        
+
+
+
+
     });
     buttonsLi.appendChild(btnSave);
 
@@ -67,6 +78,7 @@ btnAdd.addEventListener("click", () => {
     });
 
     // Montando tudo
+    buttonsLi.appendChild(btnEdit);
     buttonsLi.appendChild(btnDone);
     buttonsLi.appendChild(btnRemove);
     wrapper.appendChild(li);
