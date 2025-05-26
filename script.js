@@ -6,16 +6,22 @@ btnAdd.addEventListener("click", () => {
 
     const ul = document.getElementById('ul');
 
-    const wrapper = document.createElement('div');
+    const li = document.createElement('div');
+    li.classList.add('itemLi');
+
+    const wrapper = document.createElement('li');
     wrapper.classList.add('itemWrapper');
 
-    const li = document.createElement('li');
-    li.classList.add('itemLi');
 
     // Cria o span para conter o texto da tarefa
     const span = document.createElement('span');
     span.textContent = inputValue;
     li.appendChild(span);
+
+    const input = document.createElement('input');
+    input.value = inputValue;
+    li.appendChild(input);
+
 
     const btnEdit = document.createElement('button');
     span.appendChild(btnEdit);
@@ -28,6 +34,21 @@ btnAdd.addEventListener("click", () => {
 
     const buttonsLi = document.createElement('div');
     buttonsLi.classList.add('buttonsLi');
+
+    // botão "salvar"
+
+    const btnSave = document.createElement('button');
+    btnSave.classList.add('btnSave');
+    btnSave.textContent = "salvar";
+    btnSave.addEventListener("click", (e) => {
+        const button = e.target;
+        const li = button.closest('li');
+        const span = li.querySelector('span');
+        console.log(span);
+        
+        
+    });
+    buttonsLi.appendChild(btnSave);
 
     // Botão "feito"
     const btnDone = document.createElement('button');
