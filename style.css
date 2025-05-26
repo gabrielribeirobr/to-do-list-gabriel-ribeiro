@@ -108,12 +108,28 @@ span {
 
 .itemWrapper.expanded{
     height: 200px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    transition: all 0.3s ease;
 }
 
+.intemWrapper.contracted{
+    height: 60px;
+    transition: all 0.3s ease;
+}
+.itemLi input{
+    display: none;
+}
 .itemLi {
+    display: flex;
+    gap: 3px;
     font-size: 16px;
+    align-items: baseline;
 }
-
+.btnSave{
+    display: none;
+}
 /* .btnEdit{
     background-color: #c74545;
     border-radius: 5px;
