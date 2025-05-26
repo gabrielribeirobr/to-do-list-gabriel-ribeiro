@@ -4,6 +4,7 @@
     --color-focus: #e7e7e7;
     --color-light-green: #0b8185;
     --color-white: #ffffff;
+    --color-orange: #d4ac28;
 }
 
 html,
@@ -130,7 +131,7 @@ span {
 .btnSave{
     display: none;
 }
-/* .btnEdit{
+.btnEdit{
     background-color: #c74545;
     border-radius: 5px;
     border: 1px solid #f50a0a;
@@ -142,11 +143,11 @@ span {
     padding: 16px 16px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #000000;
-    background-image: url('imgs/trash-alt-svgrepo-com.svg');
+    background-image: url('imgs/edit-icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-} */
+}
 
 .buttonsLi {
     display: flex;
