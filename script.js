@@ -42,7 +42,6 @@ btnAdd.addEventListener("click", () => {
 
     const btnSave = document.createElement('button');
     btnSave.classList.add('btnSave');
-    btnSave.textContent = "salvar";
     btnSave.addEventListener("click", (e) => {
         const button = e.target;
         const li = button.closest('li');
