@@ -25,7 +25,7 @@ btnAdd.addEventListener("click", () => {
     // botão "editar"
 
     const btnEdit = document.createElement('button');
-    btnEdit.textContent = 'editar'
+    btnEdit.classList.add('btnEdit');
     btnEdit.addEventListener("click", () => {
         btnEdit.style.display = 'none';
         li.querySelector('input').style.display = "inline-block";
@@ -52,12 +52,7 @@ btnAdd.addEventListener("click", () => {
         btnSave.style.display = 'none';
         btnEdit.style.display = 'inline-block';
         btnRemove.style.display = "inline-block";
-        btnDone.style.display = "inline-block";
-        
-
-
-
-
+        btnDone.style.display = "inline-block";   
     });
     buttonsLi.appendChild(btnSave);
 
