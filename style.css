@@ -169,8 +169,6 @@ span {
     background-color: var(--color-dark-orange);
 }
 
-
-
 .btnRemove {
     background-color: var(--color-red);
     border-radius: 5px;
@@ -217,5 +215,3 @@ span {
     text-decoration: line-through;
     color: gray;
 }
-
-@media (max-wi) {}
