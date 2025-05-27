@@ -32,6 +32,7 @@ btnAdd.addEventListener("click", () => {
         btnRemove.style.display = "none";
         btnDone.style.display = "none";
         btnSave.style.display = 'inline-block';
+        ul.querySelector('span').style.display = "none";
     })
 
 
