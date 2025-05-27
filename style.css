@@ -116,6 +116,9 @@ span {
 
 .expanded{
     height: 200px;
+    display: flex;
+    padding-top: 4px;
+    align-items: flex-start;
 }
 
 
