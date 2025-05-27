@@ -215,3 +215,13 @@ span {
     text-decoration: line-through;
     color: gray;
 }
+
+@media (min-width: 1024px){
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    .itemWrapper{
+        width: 65%;
+    }
+}
