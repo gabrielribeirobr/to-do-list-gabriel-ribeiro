@@ -24,7 +24,7 @@ btnAdd.addEventListener("click", () => {
     li.appendChild(input);
 
     // botão "editar"
-
+    
     const btnEdit = document.createElement('button');
     btnEdit.classList.add('btnEdit');
     btnEdit.addEventListener("click", () => {
@@ -48,9 +48,9 @@ btnAdd.addEventListener("click", () => {
     btnSave.classList.add('btnSave');
     btnSave.addEventListener("click", (e) => {
         const button = e.target;
-        /* const wrapperElement = button.closest('li'); */
-        const span = li.querySelector('span');
-        const input = li.querySelector('input');
+        const wrapperElement = button.closest('li');
+        const span = wrapperElement.querySelector('span');
+        const input = wrapperElement.querySelector('input');
 
         if (input.value.trim() === "") {
             alert("O nome da tarefa não pode estar vazio.");  // verifica se adicionou uma tarefa em branco
@@ -64,6 +64,7 @@ btnAdd.addEventListener("click", () => {
         btnDone.style.display = "inline-block";
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
+        wrapperElement.classList.remove('expanded');
 
     });
     buttonsLi.appendChild(btnSave);
