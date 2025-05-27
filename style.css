@@ -115,6 +115,7 @@ span {
 
 .itemLi input{
     display: none;
+    animation: fadeSlideIn 0.3s ease;
 }
 .itemLi {
     display: flex;
@@ -206,6 +207,7 @@ span {
     background-size: 28px;
     background-repeat: no-repeat;
     background-position: center center;
+    
 }
 
 .btnDone:hover {
@@ -224,6 +226,17 @@ span {
 
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideOut{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
         transform: translateY(0);
     }
 }
