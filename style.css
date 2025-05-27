@@ -43,6 +43,7 @@ ul {
     padding: 0px;
     width: 100%;
     gap: 5px;
+    
 }
 
 .hero {
@@ -111,6 +112,10 @@ span {
     overflow: hidden;
     transition: all 0.3s ease;
     animation: fadeSlideIn 0.3s ease;
+}
+
+.expanded{
+    height: 200px;
 }
 
 .itemLi input{
