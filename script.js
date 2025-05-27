@@ -4,6 +4,7 @@ btnAdd.addEventListener("click", () => {
     const inputValue = document.getElementById('txt').value.trim(); // Verifica se o campo está vazio
     if (inputValue === "") return;
 
+    
     const ul = document.getElementById('ul');
 
     const li = document.createElement('div');
@@ -32,7 +33,7 @@ btnAdd.addEventListener("click", () => {
         btnRemove.style.display = "none";
         btnDone.style.display = "none";
         btnSave.style.display = 'inline-block';
-        ul.querySelector('span').style.display = "none";
+        li.querySelector('span').style.display = "none";
     })
 
 
@@ -48,12 +49,21 @@ btnAdd.addEventListener("click", () => {
         const li = button.closest('li');
         const span = li.querySelector('span');
         const input = li.querySelector('input');
+
+        if(input.value.trim() === "") {
+            alert("O nome da tarefa não posta estar vazio.");  // verifica se adicionou uma tarefa em branco
+            return;            
+        };
+
         span.textContent = input.value;
-        li.querySelector('input').style.display = 'none';
+        
         btnSave.style.display = 'none';
         btnEdit.style.display = 'inline-block';
         btnRemove.style.display = "inline-block";
-        btnDone.style.display = "inline-block";   
+        btnDone.style.display = "inline-block";
+        span.style.display = "inline";
+        li.querySelector('input').style.display = "none";
+        
     });
     buttonsLi.appendChild(btnSave);
 
