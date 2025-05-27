@@ -4,7 +4,7 @@ btnAdd.addEventListener("click", () => {
     const inputValue = document.getElementById('txt').value.trim(); // Verifica se o campo está vazio
     if (inputValue === "") return;
 
-    
+
     const ul = document.getElementById('ul');
 
     const li = document.createElement('div');
@@ -28,14 +28,16 @@ btnAdd.addEventListener("click", () => {
     const btnEdit = document.createElement('button');
     btnEdit.classList.add('btnEdit');
     btnEdit.addEventListener("click", () => {
+
         btnEdit.style.display = 'none';
         li.querySelector('input').style.display = "inline-block";
         btnRemove.style.display = "none";
         btnDone.style.display = "none";
         btnSave.style.display = 'inline-block';
         li.querySelector('span').style.display = "none";
-    })
-
+        const liExpanded = li.closest('li');
+        liExpanded.classList.add('expanded');
+    });
 
     const buttonsLi = document.createElement('div');
     buttonsLi.classList.add('buttonsLi');
@@ -46,24 +48,23 @@ btnAdd.addEventListener("click", () => {
     btnSave.classList.add('btnSave');
     btnSave.addEventListener("click", (e) => {
         const button = e.target;
-        const li = button.closest('li');
+        /* const wrapperElement = button.closest('li'); */
         const span = li.querySelector('span');
         const input = li.querySelector('input');
 
-        if(input.value.trim() === "") {
-            alert("O nome da tarefa não posta estar vazio.");  // verifica se adicionou uma tarefa em branco
-            return;            
+        if (input.value.trim() === "") {
+            alert("O nome da tarefa não pode estar vazio.");  // verifica se adicionou uma tarefa em branco
+            return;
         };
 
         span.textContent = input.value;
-        
         btnSave.style.display = 'none';
         btnEdit.style.display = 'inline-block';
         btnRemove.style.display = "inline-block";
         btnDone.style.display = "inline-block";
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
-        
+
     });
     buttonsLi.appendChild(btnSave);
 
