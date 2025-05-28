@@ -24,7 +24,7 @@ btnAdd.addEventListener("click", () => {
     li.appendChild(input);
 
     // botão "editar"
-    
+
     const btnEdit = document.createElement('button');
     btnEdit.classList.add('btnEdit');
     btnEdit.addEventListener("click", () => {
@@ -41,16 +41,27 @@ btnAdd.addEventListener("click", () => {
         btnDescription.classList.add('btnDescription');
         li.appendChild(btnDescription);
         btnDescription.textContent = 'Adicionar descrição';
-        btnDescription.addEventListener("click", () =>{
-            
-        const liExpanded = li.closest('li');
-        liExpanded.classList.add('expanded'); 
+        btnDescription.addEventListener("click", () => {
+
+            const liExpanded = li.closest('li');
+            liExpanded.classList.add('expanded');
+            btnDescription.style.display = "none";
+
+            /* const inputDescrition = document.createElement('textarea');
+            inputDescrition.classList.add('InputDescription'); */
+
+            // botão salvar descrição
+            const btnSaveDescription = document.createElement('button');
+            btnSaveDescription.textContent = 'Salvar descrição';
+            btnSaveDescription.classList.add('btnSaveDescription');
+            li.appendChild(btnSaveDescription);
+            btnSaveDescription.addEventListener("click", () => {
+                btnSaveDescription.classList.add('btnSaveDescription');
+                liExpanded.classList.remove('expanded');
+                btnSaveDescription.style.display = 'none';
+                btnDescription.style.display = 'block';
+            })
         })
-
-
-        // expansão da LI desativada temporariamente
-
-       
     });
 
     const buttonsLi = document.createElement('div');
@@ -76,9 +87,17 @@ btnAdd.addEventListener("click", () => {
         btnEdit.style.display = 'inline-block';
         btnRemove.style.display = "inline-block";
         btnDone.style.display = "inline-block";
+
+        const btnSaveDescription = wrapperElement.querySelector('.btnSaveDescription');
+        if (btnSaveDescription) {
+            btnSaveDescription.style.display = 'none';
+        }
+
+        wrapperElement = button.closest('li');
+
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
-        wrapperElement.classList.remove('expanded');
+
 
     });
     buttonsLi.appendChild(btnSave);
