@@ -35,8 +35,22 @@ btnAdd.addEventListener("click", () => {
         btnDone.style.display = "none";
         btnSave.style.display = 'inline-block';
         li.querySelector('span').style.display = "none";
+
+        // botão adicionar descrição
+        const btnDescription = document.createElement('button');
+        btnDescription.classList.add('btnDescription');
+        li.appendChild(btnDescription);
+        btnDescription.textContent = 'Adicionar descrição';
+        btnDescription.addEventListener("click", () =>{
+            
         const liExpanded = li.closest('li');
-        liExpanded.classList.add('expanded');
+        liExpanded.classList.add('expanded'); 
+        })
+
+
+        // expansão da LI desativada temporariamente
+
+       
     });
 
     const buttonsLi = document.createElement('div');
