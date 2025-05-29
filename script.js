@@ -58,9 +58,11 @@ btnAdd.addEventListener("click", () => {
                 liExpanded.classList.add('expanded');
                 btnDescription.style.display = "none";
 
-                /* const description = document.createElement('txtarea');
+                const description = document.createElement('input');
+                description.type = 'textarea';
                 description.classList.add('description');
-                wrapper.appendChild(description); */
+                
+                wrapper.appendChild(description);
 
                 const btnSaveDescription = document.createElement('button');
                 btnSaveDescription.textContent = 'Salvar descrição';
