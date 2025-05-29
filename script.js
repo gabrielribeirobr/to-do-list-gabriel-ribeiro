@@ -135,8 +135,6 @@ btnAdd.addEventListener("click", () => {
     buttonsLi.appendChild(btnEdit);
     buttonsLi.appendChild(btnDone);
     buttonsLi.appendChild(btnRemove);
-    wrapper.appendChild(li);
-    wrapper.appendChild(buttonsLi);
     ul.appendChild(wrapper);
 
     // Limpa o campo
