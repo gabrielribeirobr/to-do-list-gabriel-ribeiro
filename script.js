@@ -7,12 +7,21 @@ btnAdd.addEventListener("click", () => {
 
     const ul = document.getElementById('ul');
 
-    const li = document.createElement('div');
-    li.classList.add('itemLi');
 
     const wrapper = document.createElement('li');
     wrapper.classList.add('itemWrapper');
 
+    const wrapperInputs = document.createElement('div');
+    wrapperInputs.classList.add('wrapperInputs');
+    wrapper.appendChild(wrapperInputs);
+
+    const li = document.createElement('div');
+    li.classList.add('itemLi');
+    wrapperInputs.appendChild(li);
+
+    const buttonsLi = document.createElement('div');
+    buttonsLi.classList.add('buttonsLi');
+    wrapperInputs.appendChild(buttonsLi);
 
     // Cria o span para conter o texto da tarefa
     const span = document.createElement('span');
@@ -69,8 +78,7 @@ btnAdd.addEventListener("click", () => {
         }
     });
 
-    const buttonsLi = document.createElement('div');
-    buttonsLi.classList.add('buttonsLi');
+    
 
     // botão "salvar"
 
