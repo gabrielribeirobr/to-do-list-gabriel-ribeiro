@@ -37,31 +37,32 @@ btnAdd.addEventListener("click", () => {
         li.querySelector('span').style.display = "none";
 
         // botão adicionar descrição
-        const btnDescription = document.createElement('button');
+        let btnDescription = li.querySelector('.btnDescription');
+    if (!btnDescription) {
+        btnDescription = document.createElement('button');
         btnDescription.classList.add('btnDescription');
-        li.appendChild(btnDescription);
         btnDescription.textContent = 'Adicionar descrição';
-        btnDescription.addEventListener("click", () => {
+        li.appendChild(btnDescription);
 
+        btnDescription.addEventListener("click", () => {
             const liExpanded = li.closest('li');
             liExpanded.classList.add('expanded');
             btnDescription.style.display = "none";
 
-            /* const inputDescrition = document.createElement('textarea');
-            inputDescrition.classList.add('InputDescription'); */
-
-            // botão salvar descrição
             const btnSaveDescription = document.createElement('button');
             btnSaveDescription.textContent = 'Salvar descrição';
             btnSaveDescription.classList.add('btnSaveDescription');
             li.appendChild(btnSaveDescription);
+
             btnSaveDescription.addEventListener("click", () => {
-                btnSaveDescription.classList.add('btnSaveDescription');
-                liExpanded.classList.remove('expanded');
                 btnSaveDescription.style.display = 'none';
                 btnDescription.style.display = 'block';
-            })
-        })
+                liExpanded.classList.remove('expanded');
+            });
+        });
+    } else {
+        btnDescription.style.display = 'block'; // reexibe se já existe
+    }
     });
 
     const buttonsLi = document.createElement('div');
