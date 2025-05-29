@@ -38,31 +38,35 @@ btnAdd.addEventListener("click", () => {
 
         // botão adicionar descrição
         let btnDescription = li.querySelector('.btnDescription');
-    if (!btnDescription) {
-        btnDescription = document.createElement('button');
-        btnDescription.classList.add('btnDescription');
-        btnDescription.textContent = 'Adicionar descrição';
-        li.appendChild(btnDescription);
+        if (!btnDescription) {                                      // verifica se já existe um botão para evitar criar o mesmo repetidas vezes
+            btnDescription = document.createElement('button');
+            btnDescription.classList.add('btnDescription');
+            btnDescription.textContent = 'Adicionar descrição';
+            li.appendChild(btnDescription);
 
-        btnDescription.addEventListener("click", () => {
-            const liExpanded = li.closest('li');
-            liExpanded.classList.add('expanded');
-            btnDescription.style.display = "none";
+            btnDescription.addEventListener("click", () => {
+                const liExpanded = li.closest('li');
+                liExpanded.classList.add('expanded');
+                btnDescription.style.display = "none";
 
-            const btnSaveDescription = document.createElement('button');
-            btnSaveDescription.textContent = 'Salvar descrição';
-            btnSaveDescription.classList.add('btnSaveDescription');
-            li.appendChild(btnSaveDescription);
+                /* const description = document.createElement('txtarea');
+                description.classList.add('description');
+                wrapper.appendChild(description); */
 
-            btnSaveDescription.addEventListener("click", () => {
-                btnSaveDescription.style.display = 'none';
-                btnDescription.style.display = 'block';
-                liExpanded.classList.remove('expanded');
+                const btnSaveDescription = document.createElement('button');
+                btnSaveDescription.textContent = 'Salvar descrição';
+                btnSaveDescription.classList.add('btnSaveDescription');
+                li.appendChild(btnSaveDescription);
+
+                btnSaveDescription.addEventListener("click", () => {
+                    btnSaveDescription.style.display = 'none';
+                    btnDescription.style.display = 'block';
+                    liExpanded.classList.remove('expanded');
+                });
             });
-        });
-    } else {
-        btnDescription.style.display = 'block'; // reexibe se já existe
-    }
+        } else {
+            btnDescription.style.display = 'block'; // reexibe se já existe
+        }
     });
 
     const buttonsLi = document.createElement('div');
@@ -91,17 +95,13 @@ btnAdd.addEventListener("click", () => {
         btnRemove.style.display = "inline-block";
         btnDone.style.display = "inline-block";
 
-        if(btnDescriptionElement){
+        if (btnDescriptionElement) {
             btnDescriptionElement.style.display = "none";
         }
 
-        /* const btnSaveDescription = wrapperElement.querySelector('.btnSaveDescription');
-        if (btnSaveDescription) {
-            btnSaveDescription.style.display = 'none';
-        } */
-
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
+
 
 
     });
