@@ -55,13 +55,12 @@ btnAdd.addEventListener("click", () => {
 
             btnDescription.addEventListener("click", () => {
                 const liExpanded = li.closest('li');
-                liExpanded.classList.add('expanded');
+                liExpanded.classList.add('autoExpanded');
                 btnDescription.style.display = "none";
-                btnSave.style.display = 'block';
+                btnSave.style.display = 'none';
 
                 const containerDescription = document.createElement('div');
                 containerDescription.classList.add('containerDescription');
-                containerDescription.style.display = 'none';
                 wrapper.appendChild(containerDescription);
 
 
@@ -79,6 +78,7 @@ btnAdd.addEventListener("click", () => {
                 btnSaveDescription.addEventListener("click", () => {
                     btnSaveDescription.style.display = 'none';
                     btnDescription.style.display = 'block';
+                    btnSave.style.display = "block"
                     
 
                     containerDescription.style.display = 'block';
@@ -124,7 +124,10 @@ btnAdd.addEventListener("click", () => {
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
 
-        liExpanded.classList.remove('expanded');
+        wrapper.classList.remove('expanded');
+
+        
+
 
     });
     buttonsLi.appendChild(btnSave);
