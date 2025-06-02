@@ -57,14 +57,21 @@ btnAdd.addEventListener("click", () => {
                 const liExpanded = li.closest('li');
                 liExpanded.classList.add('expanded');
                 btnDescription.style.display = "none";
+                btnSave.style.display = 'block';
 
-                const description = document.createElement('input');
+                const containerDescription = document.createElement('div');
+                containerDescription.classList.add('containerDescription');
+                containerDescription.style.display = 'none';
+                wrapper.appendChild(containerDescription);
+
+
+                const description = document.createElement('textarea'); // cria o text area para a descrição
                 description.type = 'textarea';
                 description.classList.add('description');
-                
+                description.placeholder = 'Digite uma descrição';
                 wrapper.appendChild(description);
 
-                const btnSaveDescription = document.createElement('button');
+                const btnSaveDescription = document.createElement('button'); // criando botão de salvar descrição
                 btnSaveDescription.textContent = 'Salvar descrição';
                 btnSaveDescription.classList.add('btnSaveDescription');
                 li.appendChild(btnSaveDescription);
@@ -72,7 +79,12 @@ btnAdd.addEventListener("click", () => {
                 btnSaveDescription.addEventListener("click", () => {
                     btnSaveDescription.style.display = 'none';
                     btnDescription.style.display = 'block';
-                    liExpanded.classList.remove('expanded');
+                    
+
+                    containerDescription.style.display = 'block';
+                    description.style.display = 'none';
+
+                    containerDescription.innerHTML = wrapper.querySelector('.description').value;
                 });
             });
         } else {
@@ -80,7 +92,7 @@ btnAdd.addEventListener("click", () => {
         }
     });
 
-    
+
 
     // botão "salvar"
 
@@ -112,7 +124,7 @@ btnAdd.addEventListener("click", () => {
         span.style.display = "inline";
         li.querySelector('input').style.display = "none";
 
-
+        liExpanded.classList.remove('expanded');
 
     });
     buttonsLi.appendChild(btnSave);
