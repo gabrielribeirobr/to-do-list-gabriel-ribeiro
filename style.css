@@ -5,7 +5,7 @@
     --color-light-green: #0b8185;
     --color-white: #ffffff;
     --color-orange: #d4ac28;
-    --color-dark-orange:#a88820;
+    --color-dark-orange: #a88820;
     --color-red: #c74545;
     --color-dark-red: #973333;
     --color-green: #06b100;
@@ -43,7 +43,7 @@ ul {
     padding: 0px;
     width: 100%;
     gap: 5px;
-    
+
 }
 
 .hero {
@@ -105,33 +105,61 @@ span {
     width: 100%;
     height: 60px;
     align-items: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--color-white);
-    justify-content: space-between;
     padding: 4px 5px 0px;
     overflow: hidden;
     transition: all 0.3s ease;
     animation: fadeSlideIn 0.3s ease;
 }
 
-.expanded{
+.expanded {
     height: 200px;
     display: flex;
     padding-top: 4px;
-    
+
 }
 
-.wrapperInputs{
+.wrapperInputs {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
 }
 
-.itemLi input{
+.containerDescription{
+    width: 75%;
+    height: 100px;
+    margin: 0px 50px 10px;
+    font-size: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    resize: none;
+    
+}
+
+.description {
+    width: 40%;
+    height: 150px;
+    padding: 5px 5px;
+    margin: 0px 25px 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align: left;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    resize: none;
+}
+
+.itemLi input {
     display: none;
     animation: fadeSlideIn 0.3s ease;
 }
+
 .itemLi {
     display: flex;
     gap: 3px;
@@ -145,7 +173,7 @@ span {
     padding: 4px;
 }
 
-.btnSave{
+.btnSave {
     display: none;
     background-color: var(--color-green);
     border-radius: 5px;
@@ -162,10 +190,11 @@ span {
     background-position: center center;
 }
 
-.btnSave:hover{
+.btnSave:hover {
     background-color: var(--color-dark-green);
 }
-.btnEdit{
+
+.btnEdit {
     background-color: var(--color-orange);
     border-radius: 5px;
     border: 1px solid var(--color-dark-orange);
@@ -182,7 +211,7 @@ span {
     background-position: center center;
 }
 
-.btnEdit:hover{
+.btnEdit:hover {
     background-color: var(--color-dark-orange);
 }
 
@@ -222,7 +251,7 @@ span {
     background-size: 28px;
     background-repeat: no-repeat;
     background-position: center center;
-    
+
 }
 
 .btnDone:hover {
@@ -245,23 +274,24 @@ span {
     }
 }
 
-@keyframes fadeSlideOut{
-    from{
+@keyframes fadeSlideOut {
+    from {
         opacity: 1;
     }
 
-    to{
+    to {
         opacity: 0;
         transform: translateY(0);
     }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
     ul {
         display: flex;
         align-items: center;
     }
-    .itemWrapper{
+
+    .itemWrapper {
         width: 65%;
     }
 }
