@@ -110,14 +110,14 @@ span {
     padding: 4px 5px 0px;
     overflow: hidden;
     transition: all 0.3s ease;
+    transition: height 0.3s ease;
     animation: fadeSlideIn 0.3s ease;
 }
 
-.expanded {
-    height: 200px;
-    display: flex;
-    padding-top: 4px;
 
+
+.autoExpanded{
+    height: auto;
 }
 
 .wrapperInputs {
@@ -129,7 +129,7 @@ span {
 
 .containerDescription{
     width: 75%;
-    height: 100px;
+    height: auto;
     margin: 0px 50px 10px;
     font-size: 14px;
     overflow-y: auto;
@@ -144,7 +144,7 @@ span {
     width: 40%;
     height: 150px;
     padding: 5px 5px;
-    margin: 0px 25px 20px;
+    margin: 10px 25px 20px;
     box-sizing: border-box;
     vertical-align: top;
     text-align: left;
