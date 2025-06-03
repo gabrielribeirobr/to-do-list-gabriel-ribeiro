@@ -53,6 +53,7 @@ ul {
     background-color: var(--color-light-green);
     width: 70%;
     padding: 20px;
+    margin-top: 5%;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -293,5 +294,9 @@ span {
 
     .itemWrapper {
         width: 65%;
+    }
+
+    .hero{
+        width: 50%;
     }
 }
