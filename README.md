@@ -63,10 +63,6 @@ Utilizar o localStorage para salvar dados do usuário
 
 Escrever um CSS limpo, responsivo e agradável visualmente.
 
-## 📸 Screenshot
----
-
-![screenshot] (https://i.imgur.com/e0jKB3e.png)
 
 
 
