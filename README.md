@@ -59,8 +59,6 @@ Manipulação do DOM com JavaScript puro
 
 Trabalhar com eventos e escutadores de forma prática
 
-Utilizar o localStorage para salvar dados do usuário
-
 Escrever um CSS limpo, responsivo e agradável visualmente.
 
 
