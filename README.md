@@ -32,9 +32,9 @@ git clone https://github.com/gabrielribeirobr/to-do-list-gabriel-ribeiro.git
 ```
 
 2. **Acesse a pasta do projeto**
-   ```bash
-   cd to-do-list-gabriel-ribeiro
-   ```
+```bash
+cd to-do-list-gabriel-ribeiro
+```
 3. **Abra o arquivo index.html**
    - Clique duas vezes sobre o arquivo index.html
    - Ou utilize a extensão Live Server no VS Code para rodar localmente com auto reload
